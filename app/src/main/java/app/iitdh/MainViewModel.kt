@@ -9,9 +9,4 @@ class MainViewModel : ViewModel()
     private val _currentScreen : MutableState<String> = mutableStateOf(Screen.Home.route)
 
     val currentScreen : MutableState<String> = _currentScreen
-
-    fun setScreen( title : String )
-    {
-        _currentScreen.value = title
-    }
 }

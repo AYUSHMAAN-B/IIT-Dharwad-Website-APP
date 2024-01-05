@@ -64,7 +64,7 @@ fun ShowCampusLife(campusLifeData : CampusLifeData)
             .padding(vertical = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween)
         {
-            var textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
+            val textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
 
             Text(campusLifeData.category,
                 modifier = Modifier.padding(start = 16.dp),

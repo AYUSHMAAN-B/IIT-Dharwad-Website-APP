@@ -35,8 +35,6 @@ data class ResearchData(
 @Composable
 fun ResearchView()
 {
-    val pages = listOf("Area", "Research Facilities", "Projects / Grants", "Outcomes")
-
     val researchData = listOf(
         ResearchData("Area", listOf()),
         ResearchData("Research Facilities", listOf()),
@@ -64,7 +62,7 @@ fun ShowResearch(researchData: ResearchData)
         Row (modifier = Modifier.fillMaxWidth().padding(vertical = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween)
         {
-            var textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
+            val textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
 
             Text(researchData.category,
                 modifier = Modifier.padding(start = 16.dp),

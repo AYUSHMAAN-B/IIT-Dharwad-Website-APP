@@ -35,8 +35,6 @@ data class AdmissionsData(
 @Composable
 fun AdmissionsView()
 {
-    val pages = listOf("UG", "MS / M.Tech", "PhD")
-
     val admissionsData = listOf(
         AdmissionsData("UG", listOf()),
         AdmissionsData("MS / M.Tech", listOf("MS", "M.TECH")),
@@ -65,7 +63,7 @@ fun ShowAdmissions(admissionData : AdmissionsData)
             .padding(vertical = 16.dp),
             horizontalArrangement = Arrangement.SpaceBetween)
         {
-            var textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
+            val textColor = if (isExpanded) Color(0xFF89288f) else Color.Black
 
             Text(admissionData.category,
                 modifier = Modifier.padding(start = 16.dp),
